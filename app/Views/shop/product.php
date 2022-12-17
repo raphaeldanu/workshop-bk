@@ -449,6 +449,8 @@
 
         $("#kode_voucher").on('input', function() {
             $('#erorKode').html('');
+            potongan = 0;
+            $("#diskon").val(potongan);
             var kode_voucher = $("#kode_voucher").val();
             $.ajax({
 				url : "<?= site_url('voucher/getdiskon') ?>",
